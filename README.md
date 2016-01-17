@@ -4,6 +4,7 @@
 
 # Example
 
+```js
 var refuze  = require("refuze")({})
 var fuze    = refuze.createClient("namespace")
 
@@ -22,4 +23,4 @@ fuze.on("sendEmailVerificationReminder", function(email){
 
 fuze.do("in 4 hours", "sendWelcomeEmail", ["fred@sintaxi.com"])
 fuze.do("in 3 days", "sendEmailVerificationReminder", ["fred@sintaxi.com"])
-
+```
