@@ -1,0 +1,31 @@
+{
+  "name": "refuze",
+  "version": "1.0.0",
+  "description": "A natural language job queue for doing things later. Built on Redis.",
+  "main": "lib/refuze.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sintaxi/refuze.git"
+  },
+  "keywords": [
+    "redis",
+    "job",
+    "queue",
+    "differed",
+    "natural",
+    "language"
+  ],
+  "author": "Brock Whitten",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sintaxi/refuze/issues"
+  },
+  "homepage": "https://github.com/sintaxi/refuze#readme",
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "should": "^8.1.1"
+  }
+}
