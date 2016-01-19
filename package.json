@@ -4,7 +4,7 @@
   "description": "A natural language job queue for doing things later. Built on Redis.",
   "main": "lib/refuze.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha -t 5000 test"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,9 @@
   "devDependencies": {
     "mocha": "^2.3.4",
     "should": "^8.1.1"
+  },
+  "dependencies": {
+    "debug": "^2.2.0",
+    "redis": "^2.4.2"
   }
 }
