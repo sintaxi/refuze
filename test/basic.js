@@ -11,21 +11,21 @@ describe("basic", function(){
     done()
   })
 
-  it("should alert in 3 seconds", function(done){
+  it("should alert in 2 seconds", function(done){
     sub.on("sendReminderEmail", function(email, name){
       email.should.eql("brock@sintaxi.com")
       name.should.eql("brock")
       done()
     })
-    pub.schedule("3 seconds", "sendReminderEmail", ["brock@sintaxi.com", "brock"])
+    pub.schedule(2, "sendReminderEmail", ["brock@sintaxi.com", "brock"])
   })
 
-  it("should alert in 5 is seconds", function(done){
+  it("should alert in 7 is seconds", function(done){
     sub.on("removeProject", function(domain){
       domain.should.eql("sintaxi.com")
       done()
     })
-    pub.schedule("5 seconds", "removeProject", ["sintaxi.com"])
+    pub.schedule(7, "removeProject", ["sintaxi.com"])
   })
 
 })

@@ -4,7 +4,7 @@
   "description": "A natural language job queue for doing things later. Built on Redis.",
   "main": "lib/refuze.js",
   "scripts": {
-    "test": "mocha -t 5000 test"
+    "test": "mocha -t 10000 test"
   },
   "repository": {
     "type": "git",
