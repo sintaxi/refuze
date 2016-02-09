@@ -1,6 +1,6 @@
 {
   "name": "refuze",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A natural language job queue for doing things later. Built on Redis.",
   "main": "lib/refuze.js",
   "scripts": {

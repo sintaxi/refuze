@@ -41,4 +41,9 @@ describe("basic", function(){
     pub.schedule(6, "removeProject", "namespace", ["bart.com"])
   })
 
+  it("should log unfound job", function(done){
+    pub.schedule(1, "drip", ["sintaxi.com"])
+    setTimeout(done, 3000)
+  })
+
 })
