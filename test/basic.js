@@ -1,13 +1,14 @@
 
 var refuze  = require("../")
 var should = require("should")
+var redisConfig = {}
 
 describe("basic", function(){
 
   var sub, pub
   before(function(done){
-    sub = refuze.subscribe({})
-    pub = refuze.scheduler({})
+    sub = refuze.subscribe(redisConfig)
+    pub = refuze.scheduler(redisConfig)
     done()
   })
 
@@ -29,16 +30,16 @@ describe("basic", function(){
   })
 
   it("should alert in 8 seconds", function(done){
-    sub.on("removeProject", function(domain){
+    sub.on("reachOut", function(domain){
       domain.should.eql("bart.com")
       done()
     })
 
     // here we continually reset the fuse by including a namespace.
-    pub.schedule(3, "removeProject", "namespace", ["foo.com"])
-    pub.schedule(4, "removeProject", "namespace", ["bar.com"])
-    pub.schedule(5, "removeProject", "namespace", ["baz.com"])
-    pub.schedule(6, "removeProject", "namespace", ["bart.com"])
+    pub.schedule(3, "reachOut", "namespace", ["foo.com"])
+    pub.schedule(4, "reachOut", "namespace", ["bar.com"])
+    pub.schedule(5, "reachOut", "namespace", ["baz.com"])
+    pub.schedule(6, "reachOut", "namespace", ["bart.com"])
   })
 
   it("should log unfound job", function(done){
